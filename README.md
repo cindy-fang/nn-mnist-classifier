@@ -25,7 +25,7 @@ For n training examples, we average the cross entropy loss over the n examples.
 
 ![image](https://user-images.githubusercontent.com/59906096/146250927-218b678e-945e-4808-afcb-bb6d2ccd8584.png)
 
-The starter code already converts labels into one hot representations for you.
+The starter code already converts labels into one hot representations.
 Instead of batch gradient descent or stochastic gradient descent, the common practice is to use mini batch gradient descent for deep learning tasks. In this case, the cost function is defined as follows:
 
 ![image](https://user-images.githubusercontent.com/59906096/146250970-96ef4edf-95c6-436b-b766-b7887bfe7476.png)
@@ -33,33 +33,29 @@ Instead of batch gradient descent or stochastic gradient descent, the common pra
 where B is the batch size, i.e. the number of training example in each mini-batch.
 
 1. Unregularized Model: 
-Implement both forward-propagation and back-propagation for the above loss function. Initialize
-the weights of the network by sampling values from a standard normal distribution. Initialize the
-bias/intercept term to 0. Set the number of hidden units to be 300, and learning rate to be 5.
-Set B = 1,000 (mini batch size). This means that we train with 1,000 examples in each iteration.
-Therefore, for each epoch, we need 50 iterations to cover the entire training data. The images are
-pre-shuffled. So you don’t need to randomly sample the data, and can just create mini-batches
-sequentially. Train the model with mini-batch gradient descent as described above. Run the
-training for 30 epochs. At the end of each epoch, calculate the value of loss function averaged
-over the entire training set, and plot it (y-axis) against the number of epochs (x-axis). In the
-same image, plot the value of the loss function averaged over the dev set, and plot it against the
-number of epochs. Similarly, in a new image, plot the accuracy (on y-axis) over the training set,
-measured as the fraction of correctly classified examples, versus the number of epochs (x-axis).
-In the same image, also plot the accuracy over the dev set versus number of epochs.
+Both the forward-propagation and back-propagation for the above loss function are implemented here. The weights of the network are initialized by sampling values from a standard normal distribution.  The bias/intercept term are initialized to 0. The number of hidden units are set to 300, learning rate as 5, and B as 1,000 (mini batch size). This means that 1,000 examples are trained in each iteration.
+Therefore, for each epoch, 50 iterations are needed to cover the entire training data. The images are
+pre-shuffled, so only sequentially creating mini-batches is good enough. After training the model, the
+training for 30 epochs was ran. At the end of each epoch, the value of loss function averaged
+over the entire training set was calculated, and plotted (y-axis) against the number of epochs (x-axis). In the
+same image, the value of the loss function averaged over the dev set was plotted against the
+number of epochs. Similarly, in a new image, the accuracy (on y-axis) over the training set,
+measured as the fraction of correctly classified examples, versus the number of epochs (x-axis) was also plotted, along with the
+accuracy over the dev set versus number of epochs.
+![image](https://user-images.githubusercontent.com/59906096/146252837-fc7b6653-d81e-42e2-9c00-6593f26527ed.png)
+
 
 2. Regularized Model: 
-Now add a regularization term to your cross entropy loss. The loss function will become:
+Added a regularization term to the cross entropy loss. The loss function will become:
 ![image](https://user-images.githubusercontent.com/59906096/146251253-9e7eac44-2d42-4626-86ed-2eb77740724c.png)
 
+![image](https://user-images.githubusercontent.com/59906096/146252875-baa15317-48c2-4c74-9db9-f029bb9d7633.png)
+
+
 3. Final Test: 
-All this while you should have stayed away from the test data completely. Now that you have
-convinced yourself that the model is working as expected (i.e, the observations you made in the
-previous part matches what you learnt in class about regularization), it is finally time to measure
-the model performance on the test set. Once we measure the test set performance, we report it
-(whatever value it may be), and NOT go back and refine the model any further.
-Initialize your model from the parameters saved in part (a) (i.e, the non-regularized model), and
-evaluate the model performance on the test data. Repeat this using the parameters saved in part
-(b) (i.e, the regularized model).
-Report your test accuracy for both regularized model and non-regularized model. You should
-have accuracy close to 0.9318 without regularization, and with 0.9670 regularization. Briefly (in
-one sentence) explain why this outcome makes sense.
+Measuring the model performance on the test set is done here. 
+Initialized model from the parameters saved in the non-regularized model, and
+evaluated the model performance on the test data. Repeated this using the parameters saved in the regularized model.
+
+![image](https://user-images.githubusercontent.com/59906096/146252804-be0d3fdb-ffc8-4bcb-95a2-7e5e14d68eda.png)
+
