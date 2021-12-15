@@ -42,6 +42,7 @@ same image, the value of the loss function averaged over the dev set was plotted
 number of epochs. Similarly, in a new image, the accuracy (on y-axis) over the training set,
 measured as the fraction of correctly classified examples, versus the number of epochs (x-axis) was also plotted, along with the
 accuracy over the dev set versus number of epochs.
+
 ![image](https://user-images.githubusercontent.com/59906096/146252837-fc7b6653-d81e-42e2-9c00-6593f26527ed.png)
 
 
@@ -49,7 +50,7 @@ accuracy over the dev set versus number of epochs.
 Added a regularization term to the cross entropy loss. The loss function will become:
 ![image](https://user-images.githubusercontent.com/59906096/146251253-9e7eac44-2d42-4626-86ed-2eb77740724c.png)
 
-![image](https://user-images.githubusercontent.com/59906096/146252875-baa15317-48c2-4c74-9db9-f029bb9d7633.png)
+![image](https://user-images.githubusercontent.com/59906096/146252947-7c8923f0-af32-4d35-ba75-ed5947110845.png)
 
 
 3. Final Test: 
@@ -57,5 +58,6 @@ Measuring the model performance on the test set is done here.
 Initialized model from the parameters saved in the non-regularized model, and
 evaluated the model performance on the test data. Repeated this using the parameters saved in the regularized model.
 
-![image](https://user-images.githubusercontent.com/59906096/146252804-be0d3fdb-ffc8-4bcb-95a2-7e5e14d68eda.png)
+![image](https://user-images.githubusercontent.com/59906096/146253037-be3a25b3-5e61-440d-94b1-48b1963a0296.png)
+
 
