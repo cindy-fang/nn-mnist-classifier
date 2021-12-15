@@ -31,8 +31,9 @@ Instead of batch gradient descent or stochastic gradient descent, the common pra
 ![image](https://user-images.githubusercontent.com/59906096/146250970-96ef4edf-95c6-436b-b766-b7887bfe7476.png)
 
 where B is the batch size, i.e. the number of training example in each mini-batch.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-1. Unregularized Model: Implement both forward-propagation and back-propagation for the above loss function. Initialize
+
+1. Unregularized Model: 
+Implement both forward-propagation and back-propagation for the above loss function. Initialize
 the weights of the network by sampling values from a standard normal distribution. Initialize the
 bias/intercept term to 0. Set the number of hidden units to be 300, and learning rate to be 5.
 Set B = 1,000 (mini batch size). This means that we train with 1,000 examples in each iteration.
@@ -46,10 +47,12 @@ number of epochs. Similarly, in a new image, plot the accuracy (on y-axis) over 
 measured as the fraction of correctly classified examples, versus the number of epochs (x-axis).
 In the same image, also plot the accuracy over the dev set versus number of epochs.
 
-2. Regularized Model: Now add a regularization term to your cross entropy loss. The loss function will become:
+2. Regularized Model: 
+Now add a regularization term to your cross entropy loss. The loss function will become:
 ![image](https://user-images.githubusercontent.com/59906096/146251253-9e7eac44-2d42-4626-86ed-2eb77740724c.png)
 
-3. Final Test: All this while you should have stayed away from the test data completely. Now that you have
+3. Final Test: 
+All this while you should have stayed away from the test data completely. Now that you have
 convinced yourself that the model is working as expected (i.e, the observations you made in the
 previous part matches what you learnt in class about regularization), it is finally time to measure
 the model performance on the test set. Once we measure the test set performance, we report it
